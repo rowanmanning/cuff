@@ -1,0 +1,22 @@
+{
+    "name": "binder",
+    "version": "0.0.0",
+
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/rowanmanning/binder.git"
+    },
+
+    "devDependencies": {
+        "jshint": "~2.1",
+        "mocha": "~1.11",
+        "mocha-srv": "~0.1",
+        "proclaim": "~1.3",
+        "sinon": "~1.5"
+    },
+
+    "main": "./lib/binder.js",
+    "scripts": {
+        "test": "make test"
+    }
+}

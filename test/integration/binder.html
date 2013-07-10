@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+
+    <meta charset="utf-8"/>
+    <title>Binder (Browser) Integration Tests</title>
+
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            background-color: #fff;
+            font-family: sans-serif;
+            font-size: 24px;
+            color: #333;
+        }
+        body {
+            padding: 10px;
+        }
+        .control {
+            background-color: #fff;
+        }
+        .label {
+            margin: 0;
+            padding: 12px;
+            border: 10px solid #fff;
+        }
+    </style>
+
+</head>
+<body>
+
+    <div data-control="foo" class="control">
+        <p class="label">This element should be green with black text.</p>
+    </div>
+
+    <div data-control="foo bar" class="control">
+        <p class="label">This element should be green with red text.</p>
+        <div>
+            <div data-control="baz" class="control">
+                <p class="label">This element should be red with green text.</p>
+            </div>
+        </div>
+    </div>
+
+    <div data-customcontrol="bar" class="control">
+        <p class="label">This element should be white with red text.</p>
+    </div>
+
+    <div data-customcontrol="foo" class="control">
+        <p class="label">This element should be green with black text.</p>
+    </div>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <script src="../../lib/binder.js"></script>
+    <script>
+
+        binder.controls.foo = function (el) {
+            $(el).css('background-color', '#ce0');
+        };
+
+        binder.controls.bar = function (el) {
+            $(el).css('color', '#f66');
+        };
+
+        binder.controls.baz = function (el) {
+            $(el).css('background-color', '#f66');
+            $(el).css('color', '#ce0');
+        };
+
+        binder.findAndBind();
+
+        binder.CONTROL_ATTR = 'data-customcontrol';
+
+        binder.findAndBind();
+
+    </script>
+
+</body>
+</html>
