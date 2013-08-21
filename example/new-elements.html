@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8"/>
+    <title>Binder Example: Binding New Elements</title>
+    <link rel="stylesheet" href="asset/example.css"/>
+
+</head>
+<body>
+
+    <p>
+        Binding controls to new elements in the DOM.
+    </p>
+
+    <p>
+        <button data-control="addParagraph">Add Paragraph (and bind any controls)</button>
+    </p>
+    
+    <div id="container" class="example-box">
+
+        <p data-control="textRed">
+            This paragraph should have red text.
+        </p>
+
+    </div>
+    
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <script src="../build/binder.js"></script>
+    <script>
+
+        // Create the textRed control
+        binder.controls.textRed = function (el) {
+            el.style.color = '#f00';
+        };
+
+        // Create the addParagraph control
+        binder.controls.addParagraph = function (el) {
+
+            // Cache jQuery objects for each important element
+            var button = $(el);
+            var container = $('#container');
+
+            // Button click handler
+            button.on('click', function () {
+
+                // Append a new paragraph to the container
+                container.append(
+                    '<p data-control="textRed">' +
+                        'This paragraph should have red text' +
+                    '</p>'
+                );
+
+                // Rebind controls in the container
+                binder(container[0]);
+
+            });
+        };
+
+        // Run binder, binding all controls found in the DOM
+        // (elements with data-control attributes)
+        binder();
+
+    </script>
+
+</body>
+</html>

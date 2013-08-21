@@ -1,0 +1,35 @@
+
+/* Basic styling */
+html, body {
+    margin: 0;
+    padding: 0;
+}
+body {
+    padding: 20px;
+    font-family: sans-serif;
+}
+
+/* Example Box */
+.example-box {
+    padding: 20px;
+    background-color: #eee;
+}
+
+/* Hidden content */
+.hidden {
+    display: none;
+}
+
+/* Remove spacing */
+.no-space {
+    margin: 0;
+    padding: 0;
+}
+.no-space-above {
+    margin-top: 0;
+    padding-top: 0;
+}
+.no-space-below {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}

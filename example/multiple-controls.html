@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8"/>
+    <title>Binder Example: Binding Multiple Controls</title>
+    <link rel="stylesheet" href="asset/example.css"/>
+
+</head>
+<body>
+
+    <p>
+        Binding multiple controls to a single element.
+    </p>
+
+    <p>
+        The box below should have a red background (provided by one control) and green text
+        (provided by a second control).
+    </p>
+    
+    <!-- Markup for binding multiple controls -->
+    <div data-control="bgRed textGreen" class="example-box">
+        Element With Multiple Controls
+    </div>
+    
+    <script src="../build/binder.js"></script>
+    <script>
+
+        // Create the bgRed control
+        binder.controls.bgRed = function (el) {
+            el.style.backgroundColor = '#f00';
+        };
+
+        // Create the textGreen control
+        binder.controls.textGreen = function (el) {
+            el.style.color = '#0f0';
+        };
+
+        // Run binder, binding all controls found in the DOM
+        // (elements with data-control attributes)
+        binder();
+
+    </script>
+
+</body>
+</html>

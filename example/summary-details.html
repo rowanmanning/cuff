@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8"/>
+    <title>Binder Example: Summary/Details</title>
+    <link rel="stylesheet" href="asset/example.css"/>
+
+</head>
+<body>
+
+    <p>
+        Using Binder and jQuery to replicate HTML5 summary/details elements.
+    </p>
+    
+    <!-- The details control markup -->
+    <div data-control="details" class="example-box">
+        <h3 class="summary no-space">
+            This is a summary (click to show/hide detail)
+        </h3>
+        <div class="details hidden">
+            <p class="no-space-below">
+                This is some detail adipisicing elit. Quos, eligendi, unde, repellendus, nobis
+                dignissimos blanditiis eum corrupti fuga aliquam recusandae voluptatum consequuntur
+                atque est praesentium dolorem maxime iste debitis. Similique.
+            </p>
+        </div>
+    </div>
+    
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <script src="../build/binder.js"></script>
+    <script>
+
+        // Create the details control
+        binder.controls.details = function (el) {
+
+            // Cache jQuery objects for each important element
+            var wrapper = $(el);
+            var summary = wrapper.find('.summary');
+            var detail = wrapper.find('.details');
+
+            // When summary is clicked, toggle the visibility
+            // of the details element
+            summary.on('click', function () {
+                detail.toggleClass('hidden');
+            });
+
+        };
+
+        // Run binder, binding all controls found in the DOM
+        // (elements with data-control attributes)
+        binder();
+
+    </script>
+
+</body>
+</html>
