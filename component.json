@@ -1,0 +1,21 @@
+{
+    "name": "binder",
+    "version": "0.0.0",
+
+    "description": "A small utility for binding UI controls to DOM elements",
+    "keywords": [ "bind", "DOM", "UI" ],
+    "author": "Rowan Manning (http://rowanmanning.co.uk/)",
+    "license": "MIT",
+
+    "repo": "rowanmanning/binder",
+    "homepage": "https://github.com/rowanmanning/binder",
+    "bugs": "https://github.com/rowanmanning/binder/issues",
+
+    "main": "./lib/binder.js",
+    "scripts": [
+        "./lib/binder.js",
+        "./lib/util/array.js",
+        "./lib/util/dom.js",
+        "./lib/util/string.js"
+    ]
+}

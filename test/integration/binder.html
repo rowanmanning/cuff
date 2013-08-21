@@ -43,16 +43,20 @@
         </div>
     </div>
 
-    <div data-customcontrol="bar" class="control">
-        <p class="label">This element should be white with red text.</p>
-    </div>
+    <div id="context">
 
-    <div data-customcontrol="foo" class="control">
-        <p class="label">This element should be green with black text.</p>
+        <div data-customcontrol="bar" class="control">
+            <p class="label">This element should be white with red text.</p>
+        </div>
+
+        <div data-customcontrol="foo" class="control">
+            <p class="label">This element should be green with black text.</p>
+        </div>
+
     </div>
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
-    <script src="../../lib/binder.js"></script>
+    <script src="../../build/binder.js"></script>
     <script>
 
         binder.controls.foo = function (el) {
@@ -68,11 +72,11 @@
             $(el).css('color', '#ce0');
         };
 
-        binder.findAndBind();
+        binder();
 
         binder.CONTROL_ATTR = 'data-customcontrol';
 
-        binder.findAndBind();
+        binder(document.getElementById('context'));
 
     </script>
 

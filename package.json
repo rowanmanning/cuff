@@ -1,6 +1,7 @@
 {
     "name": "binder",
     "version": "0.0.0",
+    "private": true,
 
     "repository": {
         "type": "git",
@@ -8,6 +9,7 @@
     },
 
     "devDependencies": {
+        "browserify": "~2.25",
         "jshint": "~2.1",
         "mocha": "~1.11",
         "mocha-srv": "~0.1",

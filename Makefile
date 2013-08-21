@@ -1,6 +1,6 @@
 
 # Group targets
-all: deps lint test
+all: deps lint test bundle
 
 # Install dependencies
 deps:
@@ -25,3 +25,12 @@ test-unit:
 		--colors \
 		--recursive \
 		./test/unit
+
+# Bundle the browser-ready JavaScript
+bundle:
+	@echo "Bundling JavaScript..."
+	@mkdir -p ./build
+	@./node_modules/.bin/browserify \
+		--standalone binder \
+		--outfile ./build/binder.js \
+		./lib/binder.js

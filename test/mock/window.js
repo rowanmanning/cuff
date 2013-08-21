@@ -1,13 +1,10 @@
-(function () {
-    'use strict';
+'use strict';
 
-    var createDomElement = require('./dom-element').createDomElement;
+var createDomElement = require('./dom-element').createDomElement;
 
-    // Create a Window mock
-    exports.createWindow = function () {
-        return {
-            document: createDomElement('body')
-        };
+// Create a Window mock
+exports.createWindow = function () {
+    return {
+        document: createDomElement('body')
     };
-
-} ());
+};
