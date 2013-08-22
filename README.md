@@ -4,7 +4,7 @@ Cuff
 
 A small utility for binding UI controls to DOM elements.
 
-**Current Version:** *0.0.0*  
+**Current Version:** *1.0.0*  
 **Build Status:** [![Build Status][travis-status]][travis]  
 **Browser Support:** *Android Browser 2.2–4.2, Firefox 3.6, Firefox 4–22, Google Chrome 14–28, Internet Explorer 6–10,  Mobile Safari iOS 3–6, Safari 5–6*
 
