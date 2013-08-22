@@ -10,4 +10,4 @@ script: 'npm test'
 # Notifications
 notifications:
  email:
-   - notify+binder@rowanmanning.co.uk
+   - notify+cuff@rowanmanning.co.uk

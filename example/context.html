@@ -3,7 +3,7 @@
 <head>
 
     <meta charset="utf-8"/>
-    <title>Binder Example: Binding With Context</title>
+    <title>Cuff Example: Binding With Context</title>
     <link rel="stylesheet" href="asset/example.css"/>
 
 </head>
@@ -41,18 +41,18 @@
 
     </div>
     
-    <script src="../build/binder.js"></script>
+    <script src="../build/cuff.js"></script>
     <script>
 
         // Create the textRed control
-        binder.controls.textRed = function (el) {
+        cuff.controls.textRed = function (el) {
             el.style.color = '#f00';
         };
 
-        // Run binder with a specific context, only binding
+        // Run cuff with a specific context, only binding
         // child elements with data-control attributes
         var context = document.getElementById('example-context');
-        binder(context);
+        cuff(context);
 
     </script>
 

@@ -3,7 +3,7 @@
 <head>
 
     <meta charset="utf-8"/>
-    <title>Binder Example: Binding Multiple Controls</title>
+    <title>Cuff Example: Binding Multiple Controls</title>
     <link rel="stylesheet" href="asset/example.css"/>
 
 </head>
@@ -23,22 +23,22 @@
         Element With Multiple Controls
     </div>
     
-    <script src="../build/binder.js"></script>
+    <script src="../build/cuff.js"></script>
     <script>
 
         // Create the bgRed control
-        binder.controls.bgRed = function (el) {
+        cuff.controls.bgRed = function (el) {
             el.style.backgroundColor = '#f00';
         };
 
         // Create the textGreen control
-        binder.controls.textGreen = function (el) {
+        cuff.controls.textGreen = function (el) {
             el.style.color = '#0f0';
         };
 
-        // Run binder, binding all controls found in the DOM
+        // Run cuff, binding all controls found in the DOM
         // (elements with data-control attributes)
-        binder();
+        cuff();
 
     </script>
 

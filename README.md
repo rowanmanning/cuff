@@ -1,6 +1,6 @@
 
-Binder (Name TBC)
-=================
+Cuff
+====
 
 A small utility for binding UI controls to DOM elements.
 
@@ -11,12 +11,12 @@ A small utility for binding UI controls to DOM elements.
 ```html
 <div data-control="greenBox">Element will be green</div>
 
-<script src="path/to/binder.js"></script>
+<script src="path/to/cuff.js"></script>
 <script>
-    binder.controls.greenBox = function (element) {
+    cuff.controls.greenBox = function (element) {
         element.style.backgroundColor = '#0f0';
     };
-    binder();
+    cuff();
 </script>
 ```
 
@@ -24,66 +24,66 @@ A small utility for binding UI controls to DOM elements.
 Getting Started
 ---------------
 
-Either download [build/binder.js](build/binder.js) or install with [Bower][bower]/[Component][component]:
+Either download [build/cuff.js](build/cuff.js) or install with [Bower][bower]/[Component][component]:
 
 ```sh
-$ bower install binder
-$ component install rowanmanning/binder
+$ bower install cuff
+$ component install rowanmanning/cuff
 ```
 
-You can load Binder just by using a script, which will expose `binder` on the global namespace:
+You can load Cuff just by using a script, which will expose `cuff` on the global namespace:
 
 ```html
-<script src="path/to/binder.js"></script>
+<script src="path/to/cuff.js"></script>
 <script>
-    binder();
+    cuff();
 </script>
 ```
 
 Or you can load it with CommonJS or AMD module loaders:
 
 ```js
-var binder = require('binder');
-binder();
+var cuff = require('cuff');
+cuff();
 ```
 
 
 Usage
 -----
 
-Binder exposes a single function which is used to bind JavaScript controls to DOM elements which have a specific attribute: `data-control`. You add your controls (just functions really) to the `binder.controls` object:
+Cuff exposes a single function which is used to bind JavaScript controls to DOM elements which have a specific attribute: `data-control`. You add your controls (just functions really) to the `cuff.controls` object:
 
 ```html
-<script src="path/to/binder.js"></script>
+<script src="path/to/cuff.js"></script>
 <script>
-    binder.controls.greenBox = function (element) {
+    cuff.controls.greenBox = function (element) {
         element.style.backgroundColor = '#0f0';
     };
 </script>
 ```
 
-Binder control functions need to accept a single argument – a DOM element (note: *not* a jQuery object).
+Cuff control functions need to accept a single argument – a DOM element (note: *not* a jQuery object).
 
-Once you've added a control, you can call the `binder` function. If we've defined the `greenBox` control as above, then our function will be called for each element which has `data-control="greenBox"`:
+Once you've added a control, you can call the `cuff` function. If we've defined the `greenBox` control as above, then our function will be called for each element which has `data-control="greenBox"`:
 
 ```html
 <div data-control="greenBox">Element will be green</div>
 
-<script src="path/to/binder.js"></script>
+<script src="path/to/cuff.js"></script>
 <script>
-    binder.controls.greenBox = function (element) {
+    cuff.controls.greenBox = function (element) {
         element.style.backgroundColor = '#0f0';
     };
-    binder();
+    cuff();
 </script>
 ```
 
-These are the basics, but you can create quite complex controls easily with Binder. Your function can do anything – Binder is just a thin layer between the DOM and your JavaScript. [Example of a real-world use case: summary/details control](example/summary-details.html).
+These are the basics, but you can create quite complex controls easily with Cuff. Your function can do anything – Cuff is just a thin layer between the DOM and your JavaScript. [Example of a real-world use case: summary/details control](example/summary-details.html).
 
 
 ### Multiple Controls
 
-Binder can bind multiple controls to a single element. The `data-control` attribute is parsed in a similar way to the `class` attribute, so you can add as many controls as you wish:
+Cuff can bind multiple controls to a single element. The `data-control` attribute is parsed in a similar way to the `class` attribute, so you can add as many controls as you wish:
 
 ```html
 <div data-control="greenBox redText someOtherControl"> ... </div>
@@ -94,12 +94,12 @@ Binder can bind multiple controls to a single element. The `data-control` attrib
 
 ### Context
 
-By default, Binder looks for all `data-control` elements in the DOM. You can limit Binder's influence by passing in a context element:
+By default, Cuff looks for all `data-control` elements in the DOM. You can limit Cuff's influence by passing in a context element:
 
 ```html
 <script>
     var context = document.getElementById('#only-bind-in-here');
-    binder(context);
+    cuff(context);
 </script>
 ```
 
@@ -108,19 +108,19 @@ By default, Binder looks for all `data-control` elements in the DOM. You can lim
 
 ### DOM Changes And New Elements
 
-Binder can be called multiple times, allowing you to bind to elements which have been added to the DOM since your last call.
+Cuff can be called multiple times, allowing you to bind to elements which have been added to the DOM since your last call.
 
 [Example of binding to new elements](example/new-elements.html).
 
 
 ### Using A Different Attribute
 
-You may wish to use an attribute other than `data-control`. You can do so quite easily by setting `binder.CONTROL_ATTR`:
+You may wish to use an attribute other than `data-control`. You can do so quite easily by setting `cuff.CONTROL_ATTR`:
 
 ```html
 <script>
-    binder.CONTROL_ATTR = 'data-my-fancy-attribute';
-    binder();
+    cuff.CONTROL_ATTR = 'data-my-fancy-attribute';
+    cuff();
 </script>
 ```
 
@@ -130,7 +130,7 @@ You may wish to use an attribute other than `data-control`. You can do so quite 
 Development
 -----------
 
-To develop Binder you'll need to install [Node.js][node], clone the repo, and install dependencies with `make deps`. If you're on Windows, you'll also need to install [Make for Windows][make].
+To develop Cuff you'll need to install [Node.js][node], clone the repo, and install dependencies with `make deps`. If you're on Windows, you'll also need to install [Make for Windows][make].
 
 Once you're set up, you can run the following commands:
 
@@ -155,7 +155,7 @@ Code with lint errors or no/failing tests will not be accepted, please use the b
 License
 -------
 
-Binder is licensed under the [MIT][mit] license.
+Cuff is licensed under the [MIT][mit] license.
 
 
 
@@ -164,5 +164,5 @@ Binder is licensed under the [MIT][mit] license.
 [make]: http://gnuwin32.sourceforge.net/packages/make.htm
 [mit]: http://opensource.org/licenses/mit-license.php
 [node]: http://nodejs.org/
-[travis]: https://travis-ci.org/rowanmanning/binder
-[travis-status]: https://travis-ci.org/rowanmanning/binder.png?branch=master
+[travis]: https://travis-ci.org/rowanmanning/cuff
+[travis-status]: https://travis-ci.org/rowanmanning/cuff.png?branch=master

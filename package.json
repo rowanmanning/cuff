@@ -1,11 +1,11 @@
 {
-    "name": "binder",
+    "name": "cuff",
     "version": "0.0.0",
     "private": true,
 
     "repository": {
         "type": "git",
-        "url": "https://github.com/rowanmanning/binder.git"
+        "url": "https://github.com/rowanmanning/cuff.git"
     },
 
     "devDependencies": {
@@ -17,7 +17,7 @@
         "sinon": "~1.5"
     },
 
-    "main": "./lib/binder.js",
+    "main": "./lib/cuff.js",
     "scripts": {
         "test": "make test"
     }

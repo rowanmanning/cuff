@@ -3,7 +3,7 @@
 <head>
 
     <meta charset="utf-8"/>
-    <title>Binder (Browser) Integration Tests</title>
+    <title>Cuff (Browser) Integration Tests</title>
 
     <style>
         html, body {
@@ -56,27 +56,27 @@
     </div>
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
-    <script src="../../build/binder.js"></script>
+    <script src="../../build/cuff.js"></script>
     <script>
 
-        binder.controls.foo = function (el) {
+        cuff.controls.foo = function (el) {
             $(el).css('background-color', '#ce0');
         };
 
-        binder.controls.bar = function (el) {
+        cuff.controls.bar = function (el) {
             $(el).css('color', '#f66');
         };
 
-        binder.controls.baz = function (el) {
+        cuff.controls.baz = function (el) {
             $(el).css('background-color', '#f66');
             $(el).css('color', '#ce0');
         };
 
-        binder();
+        cuff();
 
-        binder.CONTROL_ATTR = 'data-customcontrol';
+        cuff.CONTROL_ATTR = 'data-customcontrol';
 
-        binder(document.getElementById('context'));
+        cuff(document.getElementById('context'));
 
     </script>
 

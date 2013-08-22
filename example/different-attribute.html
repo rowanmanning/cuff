@@ -3,7 +3,7 @@
 <head>
 
     <meta charset="utf-8"/>
-    <title>Binder Example: Using A Different Attribute</title>
+    <title>Cuff Example: Using A Different Attribute</title>
     <link rel="stylesheet" href="asset/example.css"/>
 
 </head>
@@ -21,20 +21,20 @@
         Element With A Different Attribute
     </div>
     
-    <script src="../build/binder.js"></script>
+    <script src="../build/cuff.js"></script>
     <script>
 
         // Create the bgRed control
-        binder.controls.bgRed = function (el) {
+        cuff.controls.bgRed = function (el) {
             el.style.backgroundColor = '#f00';
         };
 
         // Change the attribute to use in binding
-        binder.CONTROL_ATTR = 'data-something-different';
+        cuff.CONTROL_ATTR = 'data-something-different';
 
-        // Run binder, binding all controls found in the DOM
+        // Run cuff, binding all controls found in the DOM
         // (elements with data-control attributes)
-        binder();
+        cuff();
 
     </script>
 

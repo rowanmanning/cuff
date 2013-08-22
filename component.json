@@ -1,5 +1,5 @@
 {
-    "name": "binder",
+    "name": "cuff",
     "version": "0.0.0",
 
     "description": "A small utility for binding UI controls to DOM elements",
@@ -7,13 +7,13 @@
     "author": "Rowan Manning (http://rowanmanning.com/)",
     "license": "MIT",
 
-    "repo": "rowanmanning/binder",
-    "homepage": "https://github.com/rowanmanning/binder",
-    "bugs": "https://github.com/rowanmanning/binder/issues",
+    "repo": "rowanmanning/cuff",
+    "homepage": "https://github.com/rowanmanning/cuff",
+    "bugs": "https://github.com/rowanmanning/cuff/issues",
 
-    "main": "./lib/binder.js",
+    "main": "./lib/cuff.js",
     "scripts": [
-        "./lib/binder.js",
+        "./lib/cuff.js",
         "./lib/util/array.js",
         "./lib/util/dom.js",
         "./lib/util/string.js"

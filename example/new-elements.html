@@ -3,7 +3,7 @@
 <head>
 
     <meta charset="utf-8"/>
-    <title>Binder Example: Binding New Elements</title>
+    <title>Cuff Example: Binding New Elements</title>
     <link rel="stylesheet" href="asset/example.css"/>
 
 </head>
@@ -26,16 +26,16 @@
     </div>
     
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
-    <script src="../build/binder.js"></script>
+    <script src="../build/cuff.js"></script>
     <script>
 
         // Create the textRed control
-        binder.controls.textRed = function (el) {
+        cuff.controls.textRed = function (el) {
             el.style.color = '#f00';
         };
 
         // Create the addParagraph control
-        binder.controls.addParagraph = function (el) {
+        cuff.controls.addParagraph = function (el) {
 
             // Cache jQuery objects for each important element
             var button = $(el);
@@ -52,14 +52,14 @@
                 );
 
                 // Rebind controls in the container
-                binder(container[0]);
+                cuff(container[0]);
 
             });
         };
 
-        // Run binder, binding all controls found in the DOM
+        // Run cuff, binding all controls found in the DOM
         // (elements with data-control attributes)
-        binder();
+        cuff();
 
     </script>
 

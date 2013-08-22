@@ -3,14 +3,14 @@
 <head>
 
     <meta charset="utf-8"/>
-    <title>Binder Example: Summary/Details</title>
+    <title>Cuff Example: Summary/Details</title>
     <link rel="stylesheet" href="asset/example.css"/>
 
 </head>
 <body>
 
     <p>
-        Using Binder and jQuery to replicate HTML5 summary/details elements.
+        Using Cuff and jQuery to replicate HTML5 summary/details elements.
     </p>
     
     <!-- The details control markup -->
@@ -28,11 +28,11 @@
     </div>
     
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
-    <script src="../build/binder.js"></script>
+    <script src="../build/cuff.js"></script>
     <script>
 
         // Create the details control
-        binder.controls.details = function (el) {
+        cuff.controls.details = function (el) {
 
             // Cache jQuery objects for each important element
             var wrapper = $(el);
@@ -47,9 +47,9 @@
 
         };
 
-        // Run binder, binding all controls found in the DOM
+        // Run cuff, binding all controls found in the DOM
         // (elements with data-control attributes)
-        binder();
+        cuff();
 
     </script>
 
