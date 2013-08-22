@@ -2,7 +2,7 @@
 Binder (Name TBC)
 =================
 
-Bind JavaScript controls to DOM elements.
+A small utility for binding UI controls to DOM elements.
 
 **Current Version:** *0.0.0*  
 **Build Status:** [![Build Status][travis-status]][travis]  
