@@ -78,6 +78,8 @@ Once you've added a control, you can call the `binder` function. If we've define
 </script>
 ```
 
+These are the basics, but you can create quite complex controls easily with Binder. Your function can do anything – Binder is just a thin layer between the DOM and your JavaScript. [Example of a real-world use case: summary/details control](example/summary-details.html).
+
 
 ### Multiple Controls
 
