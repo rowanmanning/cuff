@@ -4,7 +4,7 @@
 
     "description": "A small utility for binding UI controls to DOM elements",
     "keywords": [ "bind", "DOM", "UI" ],
-    "author": "Rowan Manning (http://rowanmanning.co.uk/)",
+    "author": "Rowan Manning (http://rowanmanning.com/)",
     "license": "MIT",
 
     "homepage": "https://github.com/rowanmanning/binder",
