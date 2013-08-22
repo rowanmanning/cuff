@@ -30,7 +30,5 @@ test-unit:
 bundle:
 	@echo "Bundling JavaScript..."
 	@mkdir -p ./build
-	@./node_modules/.bin/browserify \
-		--standalone binder \
-		--outfile ./build/binder.js \
-		./lib/binder.js
+	@echo "`cat ./lib/header.js`\n`./node_modules/.bin/browserify --standalone binder ./lib/binder.js`"\
+		> ./build/binder.js
