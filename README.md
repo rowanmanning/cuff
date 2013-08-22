@@ -111,6 +111,20 @@ Binder can be called multiple times, allowing you to bind to elements which have
 [Example of binding to new elements](example/new-elements.html).
 
 
+### Using A Different Attribute
+
+You may wish to use an attribute other than `data-control`. You can do so quite easily by setting `binder.CONTROL_ATTR`:
+
+```html
+<script>
+    binder.CONTROL_ATTR = 'data-my-fancy-attribute';
+    binder();
+</script>
+```
+
+[Example of using a different attribute](example/different-attribute.html).
+
+
 Development
 -----------
 

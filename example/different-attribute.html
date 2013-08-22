@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8"/>
+    <title>Binder Example: Using A Different Attribute</title>
+    <link rel="stylesheet" href="asset/example.css"/>
+
+</head>
+<body>
+
+    <p>
+        Binding controls using a different attribute (not data-control).
+    </p>
+
+    <p>
+        The box below should have a red background.
+    </p>
+    
+    <div data-something-different="bgRed" class="example-box">
+        Element With A Different Attribute
+    </div>
+    
+    <script src="../build/binder.js"></script>
+    <script>
+
+        // Create the bgRed control
+        binder.controls.bgRed = function (el) {
+            el.style.backgroundColor = '#f00';
+        };
+
+        // Change the attribute to use in binding
+        binder.CONTROL_ATTR = 'data-something-different';
+
+        // Run binder, binding all controls found in the DOM
+        // (elements with data-control attributes)
+        binder();
+
+    </script>
+
+</body>
+</html>
