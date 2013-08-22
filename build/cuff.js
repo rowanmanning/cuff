@@ -83,7 +83,7 @@ exports.filter = function (arr, fn) {
 };
 
 },{}],3:[function(require,module,exports){
-(function(){/* global window */
+/* global window */
 'use strict';
 
 var arr = require('./array');
@@ -100,7 +100,6 @@ exports.getElementsByAttribute = function (attr, ctx) {
     });
 };
 
-})()
 },{"./array":2}],4:[function(require,module,exports){
 'use strict';
 
